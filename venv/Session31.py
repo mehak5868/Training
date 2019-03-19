@@ -33,16 +33,16 @@ for x in X:
 print(Y1)
 
 
-#plt.xlabel("X")
-#plt.ylabel("Y")
-#plt.grid(True)
-#plt.plot(X,Y,"o",X,Y1)
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.grid(True)
+plt.plot(X,Y,"o",X,Y1)
 #plt.show()
 X=X.reshape(len(X),1)
-Y=X.reshape(len(Y),1)
+Y=Y.reshape(len(Y),1)
 
 from sklearn.linear_model import LinearRegression
-from sklearn.metrics import r2_score
+from sklearn.metrics import r2_score , mean_absolute_error
 regression = LinearRegression()
 regression.fit(X,Y)
 y2= regression.predict(X)
@@ -50,7 +50,9 @@ b0=regression.intercept_
 b1=regression.coef_
 
 r2err=r2_score(Y,y2)
+#mbe = mean_absolute_error(Y,y2)
 print("Squared error :",r2err)
+#print("mean absolute error :",mbe)
 plt.scatter(X,Y,color="black")
 plt.scatter(X,y2,color="blue")
 plt.show()
