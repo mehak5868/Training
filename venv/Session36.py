@@ -1,7 +1,6 @@
 from tkinter import *
 from Session36A import *
 
-
 def academicsWindow():
     def onClick():
         english = foe.get()
