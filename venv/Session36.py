@@ -94,7 +94,7 @@ tea =Entry(window).grid(row=11,column = 6)
 tesc = Entry(window).grid(row=11,column = 7)
 
 
-sub = Button(window,text="Submit").grid(row=12,column = 2)
+#sub = Button(window,text="Submit").grid(row=12,column = 2)
 #fourth =Label(window , text = "Fourth:").grid(row = 4)
 window .mainloop()
 
