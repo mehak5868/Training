@@ -19,7 +19,8 @@ plt.xlabel("X")
 plt.ylabel("Y")
 plt.grid(True)
 plt.plot(X,Y,"o",X,y1)
-#plt.show()
+
+plt.show()
 
 
 
