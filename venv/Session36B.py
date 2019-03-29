@@ -1,200 +1,203 @@
 from tkinter import *
 from Session36A import *
-c1 =[]
-c2=[]
-c3=[]
-c4 =[]
-c5=[]
-c6=[]
-c7=[]
-c8 =[]
-c9 =[]
-c10 =[]
+
 def academicsWindow():
     def onClick():
         st = "First"
-        c1.append(st)
+
         e11 = fe.get()
-        c1.append(e11)
+
         m11 = fm.get()
-        c1.append(m11)
+
         h11 = fh.get()
-        c1.append(h11)
+
         p11 = fp.get()
-        c1.append(p11)
+
         ev11 = fev.get()
-        c1.append(ev11)
+
         ref1 = prime(1,st, int(e11), int(m11), int(h11), int(p11), int(ev11))
         db = Dbhelper1()
         db.saveMarksPrimary(ref1)
-        print(c1)
+
 
         st2 = "Second"
-        c2.append(st2)
+
         e22 = se.get()
-        c2.append(e22)
+
         m22 = sm.get()
-        c2.append(m22)
+
         h22 = sh.get()
-        c2.append(h22)
+
         p22 = sp.get()
-        c2.append(p22)
+
         ev22 = sev.get()
-        c2.append(ev22)
+
         ref2 = prime(2,st2, int(e22), int(m22), int(h22), int(p22), int(ev22))
         db = Dbhelper1()
         db.saveMarksPrimary(ref2)
-        print(c2)
+
 
         st3 = "Third"
-        c3.append(st3)
+
         e33 = te.get()
-        c3.append(e33)
+
         m33 = tm.get()
-        c3.append(m33)
+
         h33 = th.get()
-        c3.append(h33)
+
         p33 = tp.get()
-        c3.append(p33)
+
         ev33 = tev.get()
-        c3.append(ev33)
-        ref3 = prime(3, st3,int(e33), int(m33), int(h33), int(p33), int(ev33))
+
+        ref3 = prime(3,st3, int(e33), int(m33), int(h33), int(p33), int(ev33))
         db = Dbhelper1()
         db.saveMarksPrimary(ref3)
-        print(c3)
+
+        file = open("StudentData.csv","a")
+        file.write(ref1.detailsInCsv1())
+        file.write(ref2.detailsInCsv1())
+        file.write(ref3.detailsInCsv1())
+
 
         st4 = "Fourth"
-        c4.append(st4)
+
         english = foe.get()
-        c4.append(english)
+
         maths = fom.get()
-        c4.append(maths)
+
         hindi = foh.get()
-        c4.append(hindi)
+
         punjabi = fop.get()
-        c4.append(punjabi)
+
         sst = foa.get()
-        c4.append(sst)
+
         sci = fosc.get()
-        c4.append(sci)
+
         sref = Students(4,st4,int(english),int(maths),int(hindi),int(punjabi),int(sst),int(sci))
         db = Dbhelper()
         db.saveMarks(sref)
-        print(c4)
+
 
         st5 ="Fifth"
-        c5.append(st5)
+
         e1=fie.get()
-        c5.append(e1)
+
         m1 = fim.get()
-        c5.append(m1)
+
         h1 = fih.get()
-        c5.append(h1)
+
         p1 = fip.get()
-        c5.append(p1)
+
         ss1 = fia.get()
-        c5.append(ss1)
+
         s1 =fisc.get()
-        c5.append(s1)
+
         sref1 = Students(5,st5,int(e1),int(m1),int(h1),int(p1),int(ss1),int(s1))
         db =Dbhelper()
         db.saveMarks(sref1)
-        print(c5)
+
 
         st6 ="Sixth"
-        c6.append(st6)
+
         e2 = sie.get()
-        c6.append(e2)
+
         m2 = sim.get()
-        c6.append(m2)
+
         h2 = sih.get()
-        c6.append(h2)
+
         p2 = sip.get()
-        c6.append(p2)
+
         ss2= sia.get()
-        c6.append(ss2)
+
         s2 = sisc.get()
-        c6.append(s2)
+
         sref2 = Students(6,st6,int(e2),int(m2),int(h2),int(p2),int(ss2),int(s2))
         db=Dbhelper()
-        db.saveMarks(sref2)
-        print(c6)
+
 
         st7 ="Seventh"
-        c7.append(st7)
+
         e3 = see.get()
-        c7.append(e3)
+
         m3 = sem.get()
-        c7.append(m3)
+
         h3 = seh.get()
-        c7.append(h3)
+
         p3 = sep.get()
-        c7.append(p3)
+
         ss3 = sea.get()
-        c7.append(ss3)
+
         s3 = sesc.get()
-        c7.append(s3)
+
         sref3 =Students(7,st7,int(e3),int(m3),int(h3),int(p3),int(ss3),int(s3))
         db = Dbhelper()
         db.saveMarks(sref3)
-        print(c7)
+
 
         st8="Eighth"
-        c8.append(st8)
+
         e4 = eie.get()
-        c8.append(e4)
+
         m4 = eim.get()
-        c8.append(m4)
+
         h4 = eih.get()
-        c8.append(h4)
+
         p4 =eip.get()
-        c8.append(p4)
+
         ss4 = eia .get()
-        c8.append(ss4)
+
         s4 =  eisc.get()
-        c8.append(s4)
+
         sref4 = Students(8,st8,int(e4),int(m4),int(h4),int(p4),int(ss4),int(s4))
         db = Dbhelper()
         db.saveMarks(sref4)
-        print(c8)
+
 
         st9="Ninth"
-        c9.append(st9)
+
         e5 = nie.get()
-        c9.append(e5)
+
         m5 = nim.get()
-        c9.append(m5)
+
         h5 = nih.get()
-        c9.append(h5)
+
         p5 = nip.get()
-        c9.append(p5)
+
         ss5 = nia.get()
-        c9.append(ss5)
+
         s5 = eisc.get()
-        c9.append(s5)
+
         sref5 = Students(9,st9, int(e5), int(m5), int(h5), int(p5), int(ss5), int(s5))
         db = Dbhelper()
         db.saveMarks(sref5)
-        print(c9)
+
 
         st10= "Tenth"
-        c10.append(st10)
+
         e6 = tee.get()
-        c10.append(e6)
+
         m6 = tem.get()
-        c10.append(m6)
+
         h6 = teh.get()
-        c10.append(h6)
+
         p6 = tep.get()
-        c10.append(p6)
+
         ss6= tea.get()
-        c10.append(ss6)
+
         s6 = tesc.get()
-        c10.append(s6)
-        sref6 = Students(10, st10,int(e6), int(m6), int(h6), int(p6), int(ss6), int(s6))
+
+        sref6 = Students(10,st10, int(e6), int(m6), int(h6), int(p6), int(ss6), int(s6))
         db = Dbhelper()
         db.saveMarks(sref6)
-        print(c10)
+
+        file1 = open("StudentDataSec.csv","a")
+        file1.write(sref.detailsInCsv())
+        file1.write(sref1.detailsInCsv())
+        file1.write(sref2.detailsInCsv())
+        file1.write(sref3.detailsInCsv())
+        file1.write(sref4.detailsInCsv())
+        file1.write(sref5.detailsInCsv())
+        file1.write(sref6.detailsInCsv())
 
     window = Tk()
     head1 = Label(window,text = "Primary Class").grid(row=0,column = 3)
@@ -365,73 +368,74 @@ def academicsWindow():
     #fourth =Label(window , text = "Fourth:").grid(row = 4)
     window .mainloop()
 #academicsWindow()
-l1 =[]
-l2 =[]
-l3=[]
-l4 =[]
-l5=[]
+
 def Activity():
     def onClick():
         a1 = act1.get()
-        l1.append(a1)
+
         go1 = g1 .get()
-        l1.append(go1)
+
         si1 = s1 .get()
-        l1.append(si1)
+
         br1 = b1 .get()
-        l1.append(br1)
+
         aref = activity (1,a1,int(go1),int(si1),int(br1))
         db = Dbhelper2()
         db.saveActivity(aref)
 
         a2 = act2.get()
-        l2.append(a2)
+
         go2 = g2.get()
-        l2.append(go2)
+
         si2 = s2.get()
-        l2.append(si2)
+
         br2 = b2.get()
-        l2.append(br2)
-        aref1 = activity(a2, go2, si2, br2)
+
+        aref1 = activity(2,a2,int( go2),int( si2),int (br2))
         db = Dbhelper2()
         db.saveActivity(aref1)
 
         a3 = act3.get()
-        l3.append(a3)
+
         go3 = g3.get()
-        l3.append(go3)
+
         si3 = s3.get()
-        l3.append(si3)
+
         br3 = b3.get()
-        l3.append(br3)
-        aref3 = activity(a3, go3, si3, br3)
+
+        aref3 = activity(3,a3,int (go3), int(si3),int (br3))
         db = Dbhelper2()
         db.saveActivity(aref3)
 
         a4 = act4.get()
-        l4.append(a4)
+
         go4 = g4.get()
-        l4.append(go4)
+
         si4 = s4.get()
-        l4.append(si4)
+
         br4 = b4.get()
-        l4.append(br4)
-        aref4 = activity(a4, go4, si4, br4)
+
+        aref4 = activity(4,a4, int(go4), int(si4), int(br4))
         db = Dbhelper2()
         db.saveActivity(aref4)
 
         a5 = act5.get()
-        l5.append(a5)
+
         go5 = g5.get()
-        l5.append(go5)
+
         si5 = s5.get()
-        l5.append(si5)
+
         br5 = b5.get()
-        l5.append(br5)
-        aref5 = activity(a5, go5, si5, br5)
+
+        aref5 = activity(5,a5, int(go5), int(si5), int(br5))
         db = Dbhelper2()
         db.saveActivity(aref5)
-
+        file2 = open("sports.csv","a")
+        file2.write(aref.detailsInCsv2())
+        file2.write(aref1.detailsInCsv2())
+        file2.write(aref3.detailsInCsv2())
+        file2.write(aref4.detailsInCsv2())
+        file2.write(aref5.detailsInCsv2())
 
         pass
 
@@ -513,74 +517,75 @@ def Activity():
 
 
     window.mainloop()
-Activity()
+#Activity()
 
-sa1=[]
-sa2=[]
-sa3=[]
-sa4=[]
-sa5 =[]
 def Sports():
     def onClick():
         a1 = SpName.get()
-        sa1.append(a1)
+
         Go1 = g1.get()
-        sa1.append(Go1)
+
         S1 = s1.get()
-        sa1.append(S1)
+
         B1 = b1.get()
-        sa1.append(B1)
-        aref = activity(a1, Go1, S1, B1)
+
+        aref = activity(1,a1, int(Go1), int(S1), int(B1))
         db = Dbhelper2()
         db.saveActivity(aref)
 
         a2 = SpName1.get()
-        sa2.append(a2)
+
         Go2 = g2.get()
-        sa2.append(Go2)
-        S2 = s1.get()
-        sa2.append(S2)
-        B2 = b1.get()
-        sa2.append(B2)
-        aref2 = activity(a2, Go2, S2, B2)
+
+        S2 = s2.get()
+
+        B2 = b2.get()
+
+        aref2 = activity(2,a2,int (Go2),int (S2),int (B2))
         db = Dbhelper2()
         db.saveActivity(aref2)
 
         a3 = SpName2.get()
-        sa3.append(a3)
+
         Go3 = g3.get()
-        sa3.append(Go3)
+
         S3 = s3.get()
-        sa3.append(S3)
+
         B3 = b3.get()
-        sa3.append(B3)
-        aref3 = activity(a3, Go3, S3, B3)
+
+        aref3 = activity(3,a3, int(Go3), int(S3), int(B3))
         db = Dbhelper2()
         db.saveActivity(aref3)
 
         a4 = SpName3.get()
-        sa4.append(a4)
         Go4 = g4.get()
-        sa4.append(Go4)
         S4 = s4.get()
-        sa4.append(S4)
+
         B4 = b4.get()
-        sa4.append(B4)
-        aref4 = activity(a4, Go4, S4, B4)
+
+        aref4 = activity(4,a4, int(Go4), int(S4), int(B4))
         db = Dbhelper2()
         db.saveActivity(aref4)
 
         a5 = SpName4.get()
-        sa5.append(a5)
+
         Go5 = g5.get()
-        sa5.append(Go5)
+
         S5 = s5.get()
-        sa5.append(S5)
+
         B5 = b5.get()
-        sa5.append(B5)
-        aref5 = activity(a5, Go5, S5, B2)
+
+        aref5 = activity(5,a5, int(Go5),int (S5), int(B5))
         db = Dbhelper2()
         db.saveActivity(aref5)
+
+        file3 =open("activity.csv","a")
+        file3.write(aref.detailsInCsv2())
+        file3.write(aref2.detailsInCsv2())
+        file3.write(aref3.detailsInCsv2())
+        file3.write(aref4.detailsInCsv2())
+        file3.write(aref5.detailsInCsv2())
+        file3.close()
 
     window=Tk()
 
@@ -660,11 +665,9 @@ def Sports():
     b5.grid(row=11, column=5)
 
 
-    BUTTON= Button(window, text = "Submit", command = onClick())
+    BUTTON= Button(window, text = "Submit", command = onClick)
     BUTTON.grid(row = 12 , column = 3)
 
     window.mainloop()
 
 Sports()
-
-####
