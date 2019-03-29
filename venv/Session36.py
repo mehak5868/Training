@@ -364,4 +364,155 @@ def academicsWindow():
     sub = Button(window,text="Submit",command =onClick).grid(row=15,column = 2)
     #fourth =Label(window , text = "Fourth:").grid(row = 4)
     window .mainloop()
-academicsWindow()
+#academicsWindow()
+l1 =[]
+l2 =[]
+l3=[]
+l4 =[]
+l5=[]
+def Activity():
+    def onClick():
+        a1 = act1.get()
+        l1.append(a1)
+        go1 = g1 .get()
+        l1.append(go1)
+        si1 = s1 .get()
+        l1.append(si1)
+        br1 = b1 .get()
+        l1.append(br1)
+        aref = activity (a1,go1,si1,br1)
+        db = Dbhelper2()
+        db.saveActivity(aref)
+
+        a2 = act2.get()
+        l2.append(a2)
+        go2 = g2.get()
+        l2.append(go2)
+        si2 = s2.get()
+        l2.append(si2)
+        br2 = b2.get()
+        l2.append(br2)
+        aref1 = activity(a2, go2, si2, br2)
+        db = Dbhelper2()
+        db.saveActivity(aref1)
+
+        a3 = act3.get()
+        l3.append(a3)
+        go3 = g3.get()
+        l3.append(go3)
+        si3 = s3.get()
+        l3.append(si3)
+        br3 = b3.get()
+        l3.append(br3)
+        aref3 = activity(a3, go3, si3, br3)
+        db = Dbhelper2()
+        db.saveActivity(aref3)
+
+        a4 = act4.get()
+        l4.append(a4)
+        go4 = g4.get()
+        l4.append(go4)
+        si4 = s4.get()
+        l4.append(si4)
+        br4 = b4.get()
+        l4.append(br4)
+        aref4 = activity(a4, go4, si4, br4)
+        db = Dbhelper2()
+        db.saveActivity(aref4)
+
+        a5 = act5.get()
+        l5.append(a5)
+        go5 = g5.get()
+        l5.append(go5)
+        si5 = s5.get()
+        l5.append(si5)
+        br5 = b5.get()
+        l5.append(br5)
+        aref5 = activity(a5, go5, si5, br5)
+        db = Dbhelper2()
+        db.saveActivity(aref5)
+
+
+        pass
+
+    window =Tk()
+    act = Label(window , text ="Activity")
+    act.grid(row=6)
+
+    gold = Label(window,text="Gold")
+    gold.grid(row=6,column=2)
+
+    silver = Label(window,text ="Silver")
+    silver.grid(row=6,column=3)
+
+    bronze = Label(window,text="Bronze")
+    bronze.grid(row=6,column=4)
+
+    act1 = Entry(window)
+    act1.grid(row=7)
+
+    g1 = Entry(window)
+    g1.grid(row=7,column=2)
+
+    s1 =Entry(window)
+    s1.grid(row=7,column=3)
+
+    b1 =Entry(window)
+    b1.grid(row=7,column=4)
+
+    act2 = Entry(window)
+    act2.grid(row=8)
+
+    g2 = Entry(window)
+    g2.grid(row=8, column=2)
+
+    s2 = Entry(window)
+    s2.grid(row=8, column=3)
+
+    b2 = Entry(window)
+    b2.grid(row=8, column=4)
+
+    act3 = Entry(window)
+    act3.grid(row=9)
+
+    g3 = Entry(window)
+    g3.grid(row=9, column=2)
+
+    s3 = Entry(window)
+    s3.grid(row=9, column=3)
+
+    b3 = Entry(window)
+    b3.grid(row=9, column=4)
+
+    act4 = Entry(window)
+    act4.grid(row=10)
+
+    g4 = Entry(window)
+    g4.grid(row=10, column=2)
+
+    s4 = Entry(window)
+    s4.grid(row=10, column=3)
+
+    b4 = Entry(window)
+    b4.grid(row=10, column=4)
+
+    act5 = Entry(window)
+    act5.grid(row=11)
+
+    g5 = Entry(window)
+    g5.grid(row=11, column=2)
+
+    s5 = Entry(window)
+    s5.grid(row=11, column=3)
+
+    b5 = Entry(window)
+    b5.grid(row=11, column=4)
+
+    sub= Button (window,text = "Submit",command=onClick)
+    sub.grid(row = 12,column =2)
+
+
+    window.mainloop()
+Activity()
+
+

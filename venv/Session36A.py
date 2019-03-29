@@ -33,3 +33,17 @@ class Dbhelper1():
         cursor = con.cursor()
         cursor.execute(sql)
         con.commit()
+class activity:
+    def __init__(self,activity , gold , silver , bronze):
+        self.activity=activity
+        self.gold = gold
+        self.silver = silver
+        self.bronze = bronze
+
+class  Dbhelper2():
+    def saveActivity(self,cref):
+        sql = "insert into activity values ({},{},{},{})".format(cref.activity, cref.gold, cref.silver,cref.bronze)
+        con = mysql.connector.connect(user="root", password="", host="127.0.0.1", database="student")
+        cursor = con.cursor()
+        cursor.execute(sql)
+        con.commit()
