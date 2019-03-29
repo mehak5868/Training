@@ -515,4 +515,155 @@ def Activity():
     window.mainloop()
 Activity()
 
+sa1=[]
+sa2=[]
+sa3=[]
+sa4=[]
+sa5 =[]
+def Sports():
+    def onClick():
+        a1 = SpName.get()
+        sa1.append(a1)
+        Go1 = g1.get()
+        sa1.append(Go1)
+        S1 = s1.get()
+        sa1.append(S1)
+        B1 = b1.get()
+        sa1.append(B1)
+        aref = activity(a1, Go1, S1, B1)
+        db = Dbhelper2()
+        db.saveActivity(aref)
+
+        a2 = SpName1.get()
+        sa2.append(a2)
+        Go2 = g2.get()
+        sa2.append(Go2)
+        S2 = s1.get()
+        sa2.append(S2)
+        B2 = b1.get()
+        sa2.append(B2)
+        aref2 = activity(a2, Go2, S2, B2)
+        db = Dbhelper2()
+        db.saveActivity(aref2)
+
+        a3 = SpName2.get()
+        sa3.append(a3)
+        Go3 = g3.get()
+        sa3.append(Go3)
+        S3 = s3.get()
+        sa3.append(S3)
+        B3 = b3.get()
+        sa3.append(B3)
+        aref3 = activity(a3, Go3, S3, B3)
+        db = Dbhelper2()
+        db.saveActivity(aref3)
+
+        a4 = SpName3.get()
+        sa4.append(a4)
+        Go4 = g4.get()
+        sa4.append(Go4)
+        S4 = s4.get()
+        sa4.append(S4)
+        B4 = b4.get()
+        sa4.append(B4)
+        aref4 = activity(a4, Go4, S4, B4)
+        db = Dbhelper2()
+        db.saveActivity(aref4)
+
+        a5 = SpName4.get()
+        sa5.append(a5)
+        Go5 = g5.get()
+        sa5.append(Go5)
+        S5 = s5.get()
+        sa5.append(S5)
+        B5 = b5.get()
+        sa5.append(B5)
+        aref5 = activity(a5, Go5, S5, B2)
+        db = Dbhelper2()
+        db.saveActivity(aref5)
+
+    window=Tk()
+
+    Spo = Label(window , text = "sports ")
+    Spo.grid(row = 5 , column= 3)
+
+    sport = Label(window , text ="SPORTS NAME")
+    sport.grid(row = 6 , column = 2)
+
+    gold = Label(window , text = "GOLD")
+    gold.grid(row = 6 , column = 3)
+
+    Silver = Label(window , text = "SILVER ")
+    Silver.grid(row = 6 , column = 4)
+
+    Bronze = Label(window , text = "BRONZE")
+    Bronze.grid(row = 6, column = 5)
+
+    SpName= Entry(window)
+    SpName.grid(row = 7, column = 2)
+
+    g1 = Entry(window)
+    g1.grid(row=7 , column = 3)
+
+    s1 = Entry(window)
+    s1.grid(row=7, column = 4)
+
+    b1 = Entry(window)
+    b1.grid(row=7 , column = 5)
+
+    SpName1 = Entry(window)
+    SpName1.grid(row=8, column=2)
+
+    g2 = Entry(window)
+    g2.grid(row=8, column=3)
+
+    s2 = Entry(window)
+    s2.grid(row=8, column=4)
+
+    b2 = Entry(window)
+    b2.grid(row=8, column=5)
+
+    SpName2 = Entry(window)
+    SpName2.grid(row=9, column=2)
+
+    g3 = Entry(window)
+    g3.grid(row=9, column=3)
+
+    s3 = Entry(window)
+    s3.grid(row=9, column=4)
+
+    b3 = Entry(window)
+    b3.grid(row=9, column=5)
+
+    SpName3 = Entry(window)
+    SpName3.grid(row=10, column=2)
+
+    g4 = Entry(window)
+    g4.grid(row=10, column=3)
+
+    s4 = Entry(window)
+    s4.grid(row=10, column=4)
+
+    b4 = Entry(window)
+    b4.grid(row=10, column=5)
+
+    SpName4= Entry(window)
+    SpName4.grid(row=11, column=2)
+
+    g5 = Entry(window)
+    g5.grid(row=11, column=3)
+
+    s5 = Entry(window)
+    s5.grid(row=11, column=4)
+
+    b5 = Entry(window)
+    b5.grid(row=11, column=5)
+
+
+    BUTTON= Button(window, text = "Submit", command = onClick())
+    BUTTON.grid(row = 12 , column = 3)
+
+    window.mainloop()
+
+Sports()
 
