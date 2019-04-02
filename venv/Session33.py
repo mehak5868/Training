@@ -2,7 +2,7 @@ from sklearn.datasets import load_iris
 from sklearn import tree
 import graphviz
 irisData = load_iris()
-#print(irisData)
+print(irisData)
 """print("==========Data=========")
 print (irisData.data)
 print("========Target=========")
@@ -19,9 +19,9 @@ print("Flower Predicted :",predicted)
 print("Flower Predicted :",predicted[0])
 print("Flower Predicted :",irisData.target_names[predicted[0]])
 
-data =tree.export_graphviz(classifer,out_file=None)
+""""data =tree.export_graphviz(classifer,out_file=None)
 graph = graphviz.Source(data)
 graph.render("IRIS DATA-SET TREE")
-graph.view()
+graph.view()"""
 
 

@@ -59,7 +59,7 @@ def hgf():
                 students[b][std] = students[c][std]
                 students[c][std] = temp
                 show.append(students[b])
-"""
+
 
 a = input("Show details in ascending order of roll no. or std (rolln/std):")
 if a == "rolln":
@@ -75,5 +75,5 @@ if a == "rolln":
 else:
     def takefirst(elem):
         return elem[ ]
-    students.sort(key=takefirst( ))
-    print( )
+    students.sort(key=takefirst())
+    print( )"""

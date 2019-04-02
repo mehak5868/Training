@@ -3,57 +3,58 @@ from Session36A import *
 
 def academicsWindow():
     def onClick():
-        st = "First"
+        #st = 'First'
 
-        e11 = fe.get()
+        eng1 = firstEng.get()
 
-        m11 = fm.get()
+        math1 = firstMath.get()
 
-        h11 = fh.get()
+        hindi1 = firstHindi.get()
 
-        p11 = fp.get()
+        punjabi1 = firstPunjabi.get()
 
-        ev11 = fev.get()
+        evs1 = firstEvs.get()
 
-        ref1 = prime(1,st, int(e11), int(m11), int(h11), int(p11), int(ev11))
+        ref1 = prime(1, int(eng1), int(math1), int(hindi1), int(punjabi1), int(evs1))
         db = Dbhelper1()
         db.saveMarksPrimary(ref1)
 
 
         st2 = "Second"
 
-        e22 = se.get()
+        eng2 = secondEng.get()
 
-        m22 = sm.get()
+        math2 = secondMath.get()
 
-        h22 = sh.get()
+        hindi2 = secondHindi.get()
 
-        p22 = sp.get()
+        punjabi2 = secondPunjabi.get()
 
-        ev22 = sev.get()
+        evs2 = secondEvs.get()
 
-        ref2 = prime(2,st2, int(e22), int(m22), int(h22), int(p22), int(ev22))
+        ref2 = prime(2, int(eng2), int(math2), int(hindi2), int(punjabi2), int(evs2))
         db = Dbhelper1()
         db.saveMarksPrimary(ref2)
 
 
         st3 = "Third"
 
-        e33 = te.get()
+        eng3 = thirdEng.get()
 
-        m33 = tm.get()
+        math3 = thirdMath.get()
 
-        h33 = th.get()
+        hindi3 = thirdHindi.get()
 
-        p33 = tp.get()
+        punjabi3 = thirdPunjabi.get()
 
-        ev33 = tev.get()
+        evs3 = thirdEvs.get()
 
-        ref3 = prime(3,st3, int(e33), int(m33), int(h33), int(p33), int(ev33))
+        ref3 = prime(3, int(eng3), int(math3), int(hindi3), int(punjabi3), int(evs3))
         db = Dbhelper1()
         db.saveMarksPrimary(ref3)
-
+        a=prime("Stanard", "English" , "Maths" , "Hindi" ,"Punjabi","EVS")
         file = open("StudentData.csv","a")
+        file.write(a.detailsInCsv1())
         file.write(ref1.detailsInCsv1())
         file.write(ref2.detailsInCsv1())
         file.write(ref3.detailsInCsv1())
@@ -61,136 +62,139 @@ def academicsWindow():
 
         st4 = "Fourth"
 
-        english = foe.get()
+        english4 = fourEng.get()
 
-        maths = fom.get()
+        maths4 = fourMath.get()
 
-        hindi = foh.get()
+        hindi4 = fourHindi.get()
 
-        punjabi = fop.get()
+        punjabi4 = fourPunjabi.get()
 
-        sst = foa.get()
+        sst4 = fourSST.get()
 
-        sci = fosc.get()
+        sci4 = fourSci.get()
 
-        sref = Students(4,st4,int(english),int(maths),int(hindi),int(punjabi),int(sst),int(sci))
+        sref = Students(4,int(english4),int(maths4),int(hindi4),int(punjabi4),int(sst4),int(sci4))
         db = Dbhelper()
         db.saveMarks(sref)
 
 
         st5 ="Fifth"
 
-        e1=fie.get()
+        eng5 = fiveEng.get()
 
-        m1 = fim.get()
+        math5 = fiveMath.get()
 
-        h1 = fih.get()
+        hindi5 = fiveHindi.get()
 
-        p1 = fip.get()
+        punjabi5 = fivePunjabi.get()
 
-        ss1 = fia.get()
+        sst5 = fivePunjabi.get()
 
-        s1 =fisc.get()
+        sci5 = fiveSci.get()
 
-        sref1 = Students(5,st5,int(e1),int(m1),int(h1),int(p1),int(ss1),int(s1))
+        sref1 = Students(5,int(eng5),int(math5),int(hindi5),int(punjabi5),int(sst5),int(sci5))
         db =Dbhelper()
         db.saveMarks(sref1)
 
 
         st6 ="Sixth"
 
-        e2 = sie.get()
+        eng6 = sixEng.get()
 
-        m2 = sim.get()
+        math6 = sixHindi.get()
 
-        h2 = sih.get()
+        hindi6 = sixPunjabi.get()
 
-        p2 = sip.get()
+        punjabi6 = sixPunjabi.get()
 
-        ss2= sia.get()
+        sst6= sixSST.get()
 
-        s2 = sisc.get()
+        sci6 = sixSci.get()
 
-        sref2 = Students(6,st6,int(e2),int(m2),int(h2),int(p2),int(ss2),int(s2))
+        sref2 = Students(6,int(eng6),int(math6),int(hindi6),int(punjabi6),int(sst6),int(sci6))
         db=Dbhelper()
+        db.saveMarks(sref2)
 
 
         st7 ="Seventh"
 
-        e3 = see.get()
+        eng7 = sevenEnglish.get()
 
-        m3 = sem.get()
+        math7 = sevenMath.get()
 
-        h3 = seh.get()
+        hindi7 = sevenHindi.get()
 
-        p3 = sep.get()
+        punjabi7 = sevenPunjabi.get()
 
-        ss3 = sea.get()
+        sst7 = sevenSST.get()
 
-        s3 = sesc.get()
+        sci7 = sevenSci.get()
 
-        sref3 =Students(7,st7,int(e3),int(m3),int(h3),int(p3),int(ss3),int(s3))
+        sref3 =Students(7,int(eng7),int(math7),int(hindi7),int(punjabi7),int(sst7),int(sci7))
         db = Dbhelper()
         db.saveMarks(sref3)
 
 
         st8="Eighth"
 
-        e4 = eie.get()
+        eng8 = eightEng.get()
 
-        m4 = eim.get()
+        math8 = eightMath.get()
 
-        h4 = eih.get()
+        hindi8 = eightHindi.get()
 
-        p4 =eip.get()
+        punjabi8 =eightPunjabi.get()
 
-        ss4 = eia .get()
+        sst8 = eightSST .get()
 
-        s4 =  eisc.get()
+        sci8 =  eightSci.get()
 
-        sref4 = Students(8,st8,int(e4),int(m4),int(h4),int(p4),int(ss4),int(s4))
+        sref4 = Students(8,int(eng8),int(math8),int(hindi8),int(punjabi8),int(sst8),int(sci8))
         db = Dbhelper()
         db.saveMarks(sref4)
 
 
         st9="Ninth"
 
-        e5 = nie.get()
+        eng9 = nineEng.get()
 
-        m5 = nim.get()
+        math9 = nineMath.get()
 
-        h5 = nih.get()
+        hindi9 = nineHindi.get()
 
-        p5 = nip.get()
+        punjabi9 = ninePunjabi.get()
 
-        ss5 = nia.get()
+        sst9 = nineSST.get()
 
-        s5 = eisc.get()
+        sci9 = nineSci.get()
 
-        sref5 = Students(9,st9, int(e5), int(m5), int(h5), int(p5), int(ss5), int(s5))
+        sref5 = Students(9, int(eng9), int(math9), int(hindi9), int(punjabi9), int(sst9), int(sci9))
         db = Dbhelper()
         db.saveMarks(sref5)
 
 
         st10= "Tenth"
 
-        e6 = tee.get()
+        eng10 = tenEng.get()
 
-        m6 = tem.get()
+        math10 = tenMath.get()
 
-        h6 = teh.get()
+        hindi10 = tenHindi.get()
 
-        p6 = tep.get()
+        punjabi10 = tenPunjabi.get()
 
-        ss6= tea.get()
+        sst10= tenSST.get()
 
-        s6 = tesc.get()
+        sci10 = tenSci.get()
 
-        sref6 = Students(10,st10, int(e6), int(m6), int(h6), int(p6), int(ss6), int(s6))
+        sref6 = Students(10, int(eng10), int(math10), int(hindi10), int(punjabi10), int(sst10), int(sci10))
         db = Dbhelper()
         db.saveMarks(sref6)
 
+        b = Students("Stanard", "English" , "Maths" , "Hindi" ,"Punjabi","SSt","Science" )
         file1 = open("StudentDataSec.csv","a")
+        file1.write( b.detailsInCsv())
         file1.write(sref.detailsInCsv())
         file1.write(sref1.detailsInCsv())
         file1.write(sref2.detailsInCsv())
@@ -212,40 +216,40 @@ def academicsWindow():
     two = Label(window, text="SECOND  :").grid(row=3)
     three = Label(window, text="THIRD :").grid(row=4)
 
-    fe = Entry(window)
-    fe.grid(row=2, column=2)  # first class
-    fm = Entry(window)
-    fm.grid(row=2, column=3)
-    fh = Entry(window)
-    fh.grid(row=2, column=4)
-    fp = Entry(window)
-    fp.grid(row=2, column=5)
-    fev = Entry(window)
-    fev.grid(row=2, column=6)
+    firstEng = Entry(window)
+    firstEng.grid(row=2, column=2)  # first class
+    firstMath = Entry(window)
+    firstMath.grid(row=2, column=3)
+    firstHindi = Entry(window)
+    firstHindi.grid(row=2, column=4)
+    firstPunjabi = Entry(window)
+    firstPunjabi.grid(row=2, column=5)
+    firstEvs = Entry(window)
+    firstEvs.grid(row=2, column=6)
 
-    se = Entry(window)
-    se.grid(row=3, column=2)  # second class
-    sm = Entry(window)
-    sm.grid(row=3, column=3)
-    sh = Entry(window)
-    sh.grid(row=3, column=4)
-    sp = Entry(window)
-    sp.grid(row=3, column=5)
-    sev = Entry(window)
-    sev.grid(row=3, column=6)
+    secondEng = Entry(window)
+    secondEng.grid(row=3, column=2)  # second class
+    secondMath = Entry(window)
+    secondMath.grid(row=3, column=3)
+    secondHindi = Entry(window)
+    secondHindi.grid(row=3, column=4)
+    secondPunjabi = Entry(window)
+    secondPunjabi.grid(row=3, column=5)
+    secondEvs = Entry(window)
+    secondEvs.grid(row=3, column=6)
     # sa = Entry(window).grid(row=3, column=6)
     # ssc = Entry(window).grid(row=3, column=7)
 
-    te = Entry(window)
-    te.grid(row=4, column=2)  # third class
-    tm = Entry(window)
-    tm.grid(row=4, column=3)
-    th = Entry(window)
-    th.grid(row=4, column=4)
-    tp = Entry(window)
-    tp.grid(row=4, column=5)
-    tev = Entry(window)
-    tev.grid(row=4, column=6)
+    thirdEng = Entry(window)
+    thirdEng.grid(row=4, column=2)  # third class
+    thirdMath = Entry(window)
+    thirdMath.grid(row=4, column=3)
+    thirdHindi = Entry(window)
+    thirdHindi.grid(row=4, column=4)
+    thirdPunjabi = Entry(window)
+    thirdPunjabi.grid(row=4, column=5)
+    thirdEvs = Entry(window)
+    thirdEvs.grid(row=4, column=6)
 
 
 ###########################################################
@@ -272,96 +276,97 @@ def academicsWindow():
 
 
 
-    foe =Entry(window)
-    foe .grid(row=8,column = 2)# fouth class
-    fom =Entry(window)
-    fom.grid(row=8,column = 3)
-    foh =Entry(window)
-    foh.grid(row=8,column = 4)
-    fop =Entry(window)
-    fop.grid(row=8,column = 5)
-    foa =Entry(window)
-    foa.grid(row=8,column = 6)
-    fosc = Entry(window)
-    fosc.grid(row=8,column = 7)
+    fourEng =Entry(window)
+    fourEng .grid(row=8,column = 2)# fouth class
+    fourMath =Entry(window)
+    fourMath.grid(row=8,column = 3)
+    fourHindi =Entry(window)
+    fourHindi.grid(row=8,column = 4)
+    fourPunjabi =Entry(window)
+    fourPunjabi.grid(row=8,column = 5)
+    fourSST =Entry(window)
+    fourSST.grid(row=8,column = 6)
+    fourSci = Entry(window)
+    fourSci.grid(row=8,column = 7)
 
-    fie =Entry(window)
-    fie.grid(row=9,column = 2) # fifth
-    fim =Entry(window)
-    fim.grid(row=9,column = 3)
-    fih =Entry(window)
-    fih.grid(row=9,column = 4)
-    fip =Entry(window)
-    fip.grid(row=9,column = 5)
-    fia =Entry(window)
-    fia   .grid(row=9,column = 6)
-    fisc = Entry(window)
-    fisc.grid(row=9,column = 7)
+    fiveEng =Entry(window)
+    fiveEng.grid(row=9,column = 2) # fifth
+    fiveMath =Entry(window)
+    fiveMath.grid(row=9,column = 3)
+    fiveHindi =Entry(window)
+    fiveHindi.grid(row=9,column = 4)
+    fivePunjabi =Entry(window)
+    fivePunjabi.grid(row=9,column = 5)
+    fiveSST =Entry(window)
+    fiveSST   .grid(row=9,column = 6)
+    fiveSci = Entry(window)
+    fiveSci.grid(row=9,column = 7)
 
-    sie =Entry(window)
-    sie.grid(row=10,column = 2) #sixth
-    sim =Entry(window)
-    sim.grid(row=10,column = 3)
-    sih =Entry(window)
-    sih   .grid(row=10,column = 4)
-    sip =Entry(window)
-    sip.grid(row=10,column = 5)
-    sia =Entry(window)
-    sia.grid(row=10,column = 6)
-    sisc = Entry(window)
-    sisc.grid(row=10,column = 7)
+    sixEng =Entry(window)
+    sixEng.grid(row=10,column = 2) #sixth
+    sixMath =Entry(window)
+    sixMath.grid(row=10,column = 3)
+    sixHindi =Entry(window)
+    sixHindi   .grid(row=10,column = 4)
+    sixPunjabi =Entry(window)
+    sixPunjabi.grid(row=10,column = 5)
+    sixSST =Entry(window)
+    sixSST.grid(row=10,column = 6)
+    sixSci = Entry(window)
+    sixSci.grid(row=10,column = 7)
 
-    see =Entry(window)
-    see.grid(row=11,column = 2)# seventh
-    sem =Entry(window)
-    sem.grid(row=11,column = 3)
-    seh =Entry(window)
-    seh.grid(row=11,column = 4)
-    sep =Entry(window)
-    sep.grid(row=11,column = 5)
-    sea =Entry(window)
-    sea.grid(row=11,column = 6)
-    sesc = Entry(window)
-    sesc.grid(row=11,column = 7)
+    sevenEnglish =Entry(window)
+    sevenEnglish.grid(row=11,column = 2)# seventh
+    sevenMath =Entry(window)
+    sevenMath.grid(row=11,column = 3)
+    sevenHindi =Entry(window)
+    sevenHindi.grid(row=11,column = 4)
+    sevenPunjabi =Entry(window)
+    sevenPunjabi.grid(row=11,column = 5)
+    sevenSST =Entry(window)
+    sevenSST.grid(row=11,column = 6)
+    sevenSci = Entry(window)
+    sevenSci.grid(row=11,column = 7)
 
-    eie =Entry(window)
-    eie.grid(row=12,column = 2) #eighth
-    eim =Entry(window)
-    eim.grid(row=12,column = 3)
-    eih =Entry(window)
-    eih.grid(row=12,column = 4)
-    eip =Entry(window)
-    eip.grid(row=12,column = 5)
-    eia =Entry(window)
-    eia.grid(row=12,column = 6)
-    eisc = Entry(window)
-    eisc.grid(row=12,column = 7)
 
-    nie =Entry(window)
-    nie.grid(row=13,column = 2) # ninth
-    nim =Entry(window)
-    nim   .grid(row=13,column = 3)
-    nih =Entry(window)
-    nih.grid(row=13,column = 4)
-    nip =Entry(window)
-    nip.grid(row=13,column = 5)
-    nia =Entry(window)
-    nia.grid(row=13,column = 6)
-    nisc = Entry(window)
-    nisc.grid(row=13,column = 7)
+    eightEng =Entry(window)
+    eightEng.grid(row=12,column = 2) #eighth
+    eightMath =Entry(window)
+    eightMath.grid(row=12,column = 3)
+    eightHindi =Entry(window)
+    eightHindi.grid(row=12,column = 4)
+    eightPunjabi =Entry(window)
+    eightPunjabi.grid(row=12,column = 5)
+    eightSST =Entry(window)
+    eightSST.grid(row=12,column = 6)
+    eightSci = Entry(window)
+    eightSci.grid(row=12,column = 7)
 
-    tee =Entry(window)
-    tee.grid(row=14,column = 2) #tenth
-    tem =Entry(window)
-    tem.grid(row=14,column = 3)
-    teh =Entry(window)
-    teh.grid(row=14,column = 4)
-    tep =Entry(window)
-    tep.grid(row=14,column = 5)
-    tea =Entry(window)
-    tea.grid(row=14,column = 6)
-    tesc = Entry(window)
-    tesc.grid(row=14,column = 7)
+    nineEng =Entry(window)
+    nineEng.grid(row=13,column = 2) # ninth
+    nineMath =Entry(window)
+    nineMath   .grid(row=13,column = 3)
+    nineHindi =Entry(window)
+    nineHindi.grid(row=13,column = 4)
+    ninePunjabi =Entry(window)
+    ninePunjabi.grid(row=13,column = 5)
+    nineSST =Entry(window)
+    nineSST.grid(row=13,column = 6)
+    nineSci = Entry(window)
+    nineSci.grid(row=13,column = 7)
+
+    tenEng =Entry(window)
+    tenEng.grid(row=14,column = 2)   #tenth
+    tenMath =Entry(window)
+    tenMath.grid(row=14,column = 3)
+    tenHindi =Entry(window)
+    tenHindi.grid(row=14,column = 4)
+    tenPunjabi =Entry(window)
+    tenPunjabi.grid(row=14,column = 5)
+    tenSST =Entry(window)
+    tenSST.grid(row=14,column = 6)
+    tenSci = Entry(window)
+    tenSci.grid(row=14,column = 7)
 
 
     sub = Button(window,text="Submit",command =onClick).grid(row=15,column = 2)
@@ -371,73 +376,74 @@ def academicsWindow():
 
 def Activity():
     def onClick():
-        a1 = act1.get()
+        activity1 = activityEntry1.get()
 
-        go1 = g1 .get()
+        gold1 = goldEntry1 .get()
 
-        si1 = s1 .get()
+        silver1 = silverEntry1 .get()
 
-        br1 = b1 .get()
+        bronze1 = bronzeEntry1 .get()
 
-        aref = activity (1,a1,int(go1),int(si1),int(br1))
+        aref = activity (activity1,int(gold1),int(silver1),int(bronze1))
         db = Dbhelper2()
         db.saveActivity(aref)
 
-        a2 = act2.get()
+        activity2 = activityEntry2.get()
 
-        go2 = g2.get()
+        gold2 = goldEntry2.get()
 
-        si2 = s2.get()
+        silver2 = silverEntry2.get()
 
-        br2 = b2.get()
+        bronze2 = bronzeEntry2.get()
 
-        aref1 = activity(2,a2,int( go2),int( si2),int (br2))
+        aref1 = activity(activity2,int( gold2),int( silver2),int (bronze2))
         db = Dbhelper2()
         db.saveActivity(aref1)
 
-        a3 = act3.get()
+        activity3 = activityEntry3.get()
 
-        go3 = g3.get()
+        gold3 = goldEntry3.get()
 
-        si3 = s3.get()
+        silver3 = silverEntry3.get()
 
-        br3 = b3.get()
+        bronze3 = bronzeEntry3.get()
 
-        aref3 = activity(3,a3,int (go3), int(si3),int (br3))
+        aref3 = activity(activity3,int (gold3), int(silver3),int (bronze3))
         db = Dbhelper2()
         db.saveActivity(aref3)
 
-        a4 = act4.get()
+        activity4 = activityEntry4.get()
 
-        go4 = g4.get()
+        gold4 = goldEntry4.get()
 
-        si4 = s4.get()
+        silver4 = silverEntry4.get()
 
-        br4 = b4.get()
+        bronze4 = bronzeEntry4.get()
 
-        aref4 = activity(4,a4, int(go4), int(si4), int(br4))
+        aref4 = activity(activity4, int(gold4), int(silver4), int(bronze4))
         db = Dbhelper2()
         db.saveActivity(aref4)
 
-        a5 = act5.get()
+        activity5 = activityEntry5.get()
 
-        go5 = g5.get()
+        gold5 = goldEntry5.get()
 
-        si5 = s5.get()
+        silver5 = silverEntry5.get()
 
-        br5 = b5.get()
+        bronze5 = bronzeEntry5.get()
 
-        aref5 = activity(5,a5, int(go5), int(si5), int(br5))
+        aref5 = activity(activity5, int(gold5), int(silver5), int(bronze5))
         db = Dbhelper2()
         db.saveActivity(aref5)
+        a = activity("Activity", "Gold", "Silver", "Bronze")
         file2 = open("sports.csv","a")
+        file2.write(a.detailsInCsv2())
         file2.write(aref.detailsInCsv2())
         file2.write(aref1.detailsInCsv2())
         file2.write(aref3.detailsInCsv2())
         file2.write(aref4.detailsInCsv2())
         file2.write(aref5.detailsInCsv2())
 
-        pass
 
     window =Tk()
     act = Label(window , text ="Activity")
@@ -452,65 +458,65 @@ def Activity():
     bronze = Label(window,text="Bronze")
     bronze.grid(row=6,column=4)
 
-    act1 = Entry(window)
-    act1.grid(row=7)
+    activityEntry1 = Entry(window)
+    activityEntry1.grid(row=7)
 
-    g1 = Entry(window)
-    g1.grid(row=7,column=2)
+    goldEntry1 = Entry(window)
+    goldEntry1.grid(row=7,column=2)
 
-    s1 =Entry(window)
-    s1.grid(row=7,column=3)
+    silverEntry1 =Entry(window)
+    silverEntry1.grid(row=7,column=3)
 
-    b1 =Entry(window)
-    b1.grid(row=7,column=4)
+    bronzeEntry1 =Entry(window)
+    bronzeEntry1.grid(row=7,column=4)
 
-    act2 = Entry(window)
-    act2.grid(row=8)
+    activityEntry2 = Entry(window)
+    activityEntry2.grid(row=8)
 
-    g2 = Entry(window)
-    g2.grid(row=8, column=2)
+    goldEntry2 = Entry(window)
+    goldEntry2.grid(row=8, column=2)
 
-    s2 = Entry(window)
-    s2.grid(row=8, column=3)
+    silverEntry2 = Entry(window)
+    silverEntry2.grid(row=8, column=3)
 
-    b2 = Entry(window)
-    b2.grid(row=8, column=4)
+    bronzeEntry2 = Entry(window)
+    bronzeEntry2.grid(row=8, column=4)
 
-    act3 = Entry(window)
-    act3.grid(row=9)
+    activityEntry3 = Entry(window)
+    activityEntry3.grid(row=9)
 
-    g3 = Entry(window)
-    g3.grid(row=9, column=2)
+    goldEntry3 = Entry(window)
+    goldEntry3.grid(row=9, column=2)
 
-    s3 = Entry(window)
-    s3.grid(row=9, column=3)
+    silverEntry3 = Entry(window)
+    silverEntry3.grid(row=9, column=3)
 
-    b3 = Entry(window)
-    b3.grid(row=9, column=4)
+    bronzeEntry3 = Entry(window)
+    bronzeEntry3.grid(row=9, column=4)
 
-    act4 = Entry(window)
-    act4.grid(row=10)
+    activityEntry4 = Entry(window)
+    activityEntry4.grid(row=10)
 
-    g4 = Entry(window)
-    g4.grid(row=10, column=2)
+    goldEntry4 = Entry(window)
+    goldEntry4.grid(row=10, column=2)
 
-    s4 = Entry(window)
-    s4.grid(row=10, column=3)
+    silverEntry4 = Entry(window)
+    silverEntry4.grid(row=10, column=3)
 
-    b4 = Entry(window)
-    b4.grid(row=10, column=4)
+    bronzeEntry4 = Entry(window)
+    bronzeEntry4.grid(row=10, column=4)
 
-    act5 = Entry(window)
-    act5.grid(row=11)
+    activityEntry5 = Entry(window)
+    activityEntry5.grid(row=11)
 
-    g5 = Entry(window)
-    g5.grid(row=11, column=2)
+    goldEntry5 = Entry(window)
+    goldEntry5.grid(row=11, column=2)
 
-    s5 = Entry(window)
-    s5.grid(row=11, column=3)
+    silverEntry5 = Entry(window)
+    silverEntry5.grid(row=11, column=3)
 
-    b5 = Entry(window)
-    b5.grid(row=11, column=4)
+    bronzeEntry5 = Entry(window)
+    bronzeEntry5.grid(row=11, column=4)
 
     sub= Button (window,text = "Submit",command=onClick)
     sub.grid(row = 12,column =2)
@@ -521,67 +527,71 @@ def Activity():
 
 def Sports():
     def onClick():
-        a1 = SpName.get()
+        activity1 = activityEntry1.get()
 
-        Go1 = g1.get()
+        gold1 = goldEntry1.get()
 
-        S1 = s1.get()
+        silver1 = silverEntry1.get()
 
-        B1 = b1.get()
+        bronze1 = bronzeEntry1.get()
 
-        aref = activity(1,a1, int(Go1), int(S1), int(B1))
+        aref = activity(str(activity1), int(gold1), int(silver1), int(bronze1))
         db = Dbhelper2()
         db.saveActivity(aref)
 
-        a2 = SpName1.get()
+        activity2 = activityEntry2.get()
 
-        Go2 = g2.get()
+        gold2 = goldEntry2.get()
 
-        S2 = s2.get()
+        silver2 = silverEntry2.get()
 
-        B2 = b2.get()
+        bronze2 = bronzeEntry2.get()
 
-        aref2 = activity(2,a2,int (Go2),int (S2),int (B2))
+        aref1 = activity(str(activity2), int(gold2), int(silver2), int(bronze2))
         db = Dbhelper2()
-        db.saveActivity(aref2)
+        db.saveActivity(aref1)
 
-        a3 = SpName2.get()
+        activity3 = activityEntry3.get()
 
-        Go3 = g3.get()
+        gold3 = goldEntry3.get()
 
-        S3 = s3.get()
+        silver3 = silverEntry3.get()
 
-        B3 = b3.get()
+        bronze3 = bronzeEntry3.get()
 
-        aref3 = activity(3,a3, int(Go3), int(S3), int(B3))
+        aref3 = activity(str(activity3), int(gold3), int(silver3), int(bronze3))
         db = Dbhelper2()
         db.saveActivity(aref3)
 
-        a4 = SpName3.get()
-        Go4 = g4.get()
-        S4 = s4.get()
+        activity4 = activityEntry4.get()
 
-        B4 = b4.get()
+        gold4 = goldEntry4.get()
 
-        aref4 = activity(4,a4, int(Go4), int(S4), int(B4))
+        silver4 = silverEntry4.get()
+
+        bronze4 = bronzeEntry4.get()
+
+        aref4 = activity(str(activity4), int(gold4), int(silver4), int(bronze4))
         db = Dbhelper2()
         db.saveActivity(aref4)
 
-        a5 = SpName4.get()
+        activity5 = activityEntry5.get()
 
-        Go5 = g5.get()
+        gold5 = goldEntry5.get()
 
-        S5 = s5.get()
+        silver5 = silverEntry5.get()
 
-        B5 = b5.get()
+        bronze5 = bronzeEntry5.get()
 
-        aref5 = activity(5,a5, int(Go5),int (S5), int(B5))
+        aref5 = activity(str(activity5), int(gold5), int(silver5), int(bronze5))
         db = Dbhelper2()
         db.saveActivity(aref5)
 
+        a = activity ("Sports","Gold","Silver","Bronze")
         file3 =open("activity.csv","a")
+        file3 .write(a.detailsInCsv2())
         file3.write(aref.detailsInCsv2())
-        file3.write(aref2.detailsInCsv2())
+        file3.write(aref1.detailsInCsv2())
         file3.write(aref3.detailsInCsv2())
         file3.write(aref4.detailsInCsv2())
         file3.write(aref5.detailsInCsv2())
@@ -589,85 +599,83 @@ def Sports():
 
     window=Tk()
 
-    Spo = Label(window , text = "sports ")
-    Spo.grid(row = 5 , column= 3)
+    act = Label(window, text="Sports")
+    act.grid(row=6)
 
-    sport = Label(window , text ="SPORTS NAME")
-    sport.grid(row = 6 , column = 2)
+    gold = Label(window, text="Gold")
+    gold.grid(row=6, column=2)
 
-    gold = Label(window , text = "GOLD")
-    gold.grid(row = 6 , column = 3)
+    silver = Label(window, text="Silver")
+    silver.grid(row=6, column=3)
 
-    Silver = Label(window , text = "SILVER ")
-    Silver.grid(row = 6 , column = 4)
+    bronze = Label(window, text="Bronze")
+    bronze.grid(row=6, column=4)
 
-    Bronze = Label(window , text = "BRONZE")
-    Bronze.grid(row = 6, column = 5)
+    activityEntry1 = Entry(window)
+    activityEntry1.grid(row=7)
 
-    SpName= Entry(window)
-    SpName.grid(row = 7, column = 2)
+    goldEntry1 = Entry(window)
+    goldEntry1.grid(row=7, column=2)
 
-    g1 = Entry(window)
-    g1.grid(row=7 , column = 3)
+    silverEntry1 = Entry(window)
+    silverEntry1.grid(row=7, column=3)
 
-    s1 = Entry(window)
-    s1.grid(row=7, column = 4)
+    bronzeEntry1 = Entry(window)
+    bronzeEntry1.grid(row=7, column=4)
 
-    b1 = Entry(window)
-    b1.grid(row=7 , column = 5)
+    activityEntry2 = Entry(window)
+    activityEntry2.grid(row=8)
 
-    SpName1 = Entry(window)
-    SpName1.grid(row=8, column=2)
+    goldEntry2 = Entry(window)
+    goldEntry2.grid(row=8, column=2)
 
-    g2 = Entry(window)
-    g2.grid(row=8, column=3)
+    silverEntry2 = Entry(window)
+    silverEntry2.grid(row=8, column=3)
 
-    s2 = Entry(window)
-    s2.grid(row=8, column=4)
+    bronzeEntry2 = Entry(window)
+    bronzeEntry2.grid(row=8, column=4)
 
-    b2 = Entry(window)
-    b2.grid(row=8, column=5)
+    activityEntry3 = Entry(window)
+    activityEntry3.grid(row=9)
 
-    SpName2 = Entry(window)
-    SpName2.grid(row=9, column=2)
+    goldEntry3 = Entry(window)
+    goldEntry3.grid(row=9, column=2)
 
-    g3 = Entry(window)
-    g3.grid(row=9, column=3)
+    silverEntry3 = Entry(window)
+    silverEntry3.grid(row=9, column=3)
 
-    s3 = Entry(window)
-    s3.grid(row=9, column=4)
+    bronzeEntry3 = Entry(window)
+    bronzeEntry3.grid(row=9, column=4)
 
-    b3 = Entry(window)
-    b3.grid(row=9, column=5)
+    activityEntry4 = Entry(window)
+    activityEntry4.grid(row=10)
 
-    SpName3 = Entry(window)
-    SpName3.grid(row=10, column=2)
+    goldEntry4 = Entry(window)
+    goldEntry4.grid(row=10, column=2)
 
-    g4 = Entry(window)
-    g4.grid(row=10, column=3)
+    silverEntry4 = Entry(window)
+    silverEntry4.grid(row=10, column=3)
 
-    s4 = Entry(window)
-    s4.grid(row=10, column=4)
+    bronzeEntry4 = Entry(window)
+    bronzeEntry4.grid(row=10, column=4)
 
-    b4 = Entry(window)
-    b4.grid(row=10, column=5)
+    activityEntry5 = Entry(window)
+    activityEntry5.grid(row=11)
 
-    SpName4= Entry(window)
-    SpName4.grid(row=11, column=2)
+    goldEntry5 = Entry(window)
+    goldEntry5.grid(row=11, column=2)
 
-    g5 = Entry(window)
-    g5.grid(row=11, column=3)
+    silverEntry5 = Entry(window)
+    silverEntry5.grid(row=11, column=3)
 
-    s5 = Entry(window)
-    s5.grid(row=11, column=4)
-
-    b5 = Entry(window)
-    b5.grid(row=11, column=5)
-
+    bronzeEntry5 = Entry(window)
+    bronzeEntry5.grid(row=11, column=4)
 
     BUTTON= Button(window, text = "Submit", command = onClick)
     BUTTON.grid(row = 12 , column = 3)
 
     window.mainloop()
 
-Sports()
+#Sports()
+academicsWindow()
+
